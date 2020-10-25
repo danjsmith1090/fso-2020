@@ -3,7 +3,10 @@ import React from 'react'
 const Person = (props) => {
   return (
     <>
-        <p>{props.name}: {props.number}</p>
+          <p>
+            <span>{props.name}: {props.number} </span>
+            <button onClick={() => {props.deleteButtonClick(props.id, props.name)}}>Delete</button>          
+          </p>
     </> 
   )
 }
