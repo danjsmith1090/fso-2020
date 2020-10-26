@@ -81,7 +81,12 @@ const App = () => {
                     setNotificationMessage(null)
                     setNotificationType(null)
                 }, 5000)
-        })
+            })
+            .catch(error => {
+                console.log(error.response.data)
+                setNotificationMessage(error.response.data.error)
+                setNotificationType("Error")
+            })
 
     }
 
